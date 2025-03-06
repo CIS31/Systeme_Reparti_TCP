@@ -7,7 +7,6 @@ The system consists of:
 - A **master server** (handled by `Master.py`), responsible for coordinating tasks.
 - **Multiple client machines** (handled by `Worker.py`), executing distributed computations.
 
----
 
 ## Main Functionalities and Execution Phases
 The distributed application follows these key steps:
@@ -22,7 +21,6 @@ The distributed application follows these key steps:
 ### Performance Consideration - Amdahl’s Law
 Amdahl’s Law helps evaluate potential performance improvements when using multiple processors or machines. It highlights that as more machines are added, the sequential portion of the program limits overall speedup.
 
----
 
 ## Prerequisites & Setup
 Before running the system, ensure that network connections and deployment configurations are set correctly.
@@ -55,7 +53,6 @@ This script initiates communication and task distribution.
 - The process completes when the master **closes connections**.
 - A `resultats.txt` file is generated, containing the final sorted data.
 
----
 
 ## Final Notes
 - Ensure proper **network configuration** between machines before running the system.
