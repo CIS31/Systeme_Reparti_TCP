@@ -1,11 +1,11 @@
 # Systeme_Reparti_TCP
 
 ## Overview
-This project aims to develop a **distributed system** where multiple machines in a lab environment collaborate to achieve a common goal while appearing as a single system to users. The machines communicate via **TCP sockets**, exchanging data and executing tasks efficiently.
+This project aims to develop a distributed system where multiple machines in a lab environment collaborate to achieve a common goal while appearing as a single system to users. The machines communicate via TCP sockets, exchanging data and executing tasks efficiently.
 
 The system consists of:
-- A **master server** (handled by `Master.py`), responsible for coordinating tasks.
-- **Multiple client machines** (handled by `Worker.py`), executing distributed computations.
+- A master server (handled by `Master.py`), responsible for coordinating tasks.
+- Multiple client machines (handled by `Worker.py`), executing distributed computations.
 
 
 ## Main Functionalities and Execution Phases
@@ -28,16 +28,16 @@ Before running the system, ensure that network connections and deployment config
 ### Execution Steps
 #### Configure `Deployement.sh`
 Before launching the deployment script, modify `Deployement.sh` to include:
-- The **username** for remote machine access.
-- The **scripts** that should be executed on client machines.
-- The **list of client machines**.
+- The username for remote machine access.
+- The scripts that should be executed on client machines.
+- The list of client machines.
 
 #### Run `Deployement.sh`
 On any machine, unzip the project folder, open a terminal, and execute:
 ```bash
 ./Deployement.sh
 ```
-This script will establish **TCP socket connections** with all client machines. Successful connections will output messages such as:
+This script will establish TCP socket connections with all client machines. Successful connections will output messages such as:
 ```bash
 Socket bound to port {port} after {attempt + 1} attempts
 ```
@@ -50,12 +50,11 @@ python Master.py
 This script initiates communication and task distribution.
 
 #### End of Execution
-- The process completes when the master **closes connections**.
+- The process completes when the master closes connections.
 - A `resultats.txt` file is generated, containing the final sorted data.
 
 
 ## Final Notes
-- Ensure proper **network configuration** between machines before running the system.
-- Use **real-time logging** to monitor the execution process.
-- The system can be **scaled** by adding more machines, but performance gains may diminish due to overhead.
+- Ensure proper network SSH configuration between machines before running the system.
+- The system can be scaled by adding more machines, but performance gains may diminish due to overhead.
 
